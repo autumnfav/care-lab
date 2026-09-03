@@ -70,8 +70,9 @@ img{max-width:100%;display:block}
 .nav-inner{max-width:var(--maxw);margin:0 auto;padding:0 var(--pad);min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .brand{display:flex;align-items:center;gap:11px}
 .brand svg{flex:none}
-.brand-name{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;line-height:1.1}
-.brand-sub{font-family:var(--display);font-size:10.5px;font-weight:500;color:var(--muted);letter-spacing:.06em;line-height:1.3;text-transform:uppercase}
+.brand-text{display:flex;flex-direction:column;justify-content:center;gap:1px}
+.brand-name{font-family:var(--display);font-weight:700;font-size:17px;letter-spacing:.01em;line-height:1}
+.brand-sub{font-family:var(--display);font-size:10.5px;font-weight:500;color:var(--muted);letter-spacing:.06em;line-height:1.1;text-transform:uppercase}
 .nav-links{display:flex;gap:24px;align-items:center;list-style:none}
 .nav-links a{font-family:var(--display);font-size:14px;font-weight:500;letter-spacing:.02em;color:var(--ink);padding:4px 0;border-bottom:2px solid transparent;transition:border-color .15s,color .15s}
 .nav-links a:hover{color:var(--red);border-bottom-color:var(--red)}
@@ -208,6 +209,7 @@ img{max-width:100%;display:block}
 .team-group h3{font-family:var(--display);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;display:flex;align-items:center;gap:12px;margin-bottom:24px}
 .team-group h3::before{content:"";width:10px;height:10px;background:var(--red);transform:rotate(45deg);flex:none}
 .team-group h3::after{content:"";flex:1;height:1px;background:var(--line)}
+.team-note{margin-top:-10px;margin-bottom:24px;color:var(--muted);font-size:15px;font-style:italic}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
 .member{background:var(--white);border:1px solid var(--line);border-radius:5px;padding:22px;position:relative;transition:transform .18s,box-shadow .18s,border-color .18s}
 .member:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(22,19,15,.08);border-color:var(--red)}
@@ -259,6 +261,15 @@ img{max-width:100%;display:block}
 .join-cta .btn.primary:hover{background:var(--red-dark);border-color:var(--red-dark)}
 .join-cta span{color:#8E8880;font-size:14.5px}
 @media(max-width:860px){.join-grid{grid-template-columns:1fr}}
+.call-post{max-width:760px;border-top:1px solid rgba(255,255,255,.14);padding-top:44px}
+.call-post h3{font-family:var(--display);font-weight:700;font-size:17px;color:#fff;margin-top:30px;margin-bottom:6px}
+.call-post p{margin-top:16px;color:#CFC9C2;font-size:16.5px;line-height:1.7}
+.call-post ul{margin-top:10px;padding-left:20px}
+.call-post li{margin-top:8px;color:#CFC9C2;font-size:16.5px;line-height:1.6}
+.call-post a{color:#EF8A8F;text-decoration:underline}
+.call-post a:hover{color:#fff}
+.call-post .sig{margin-top:28px;color:#CFC9C2;font-size:16.5px;line-height:1.7}
+.call-post .sig strong{color:#fff;font-weight:700}
 
 /* ---------- contact (dark) ---------- */
 .contact-sec{background:var(--ink);color:#fff}
@@ -302,9 +313,9 @@ footer nav a:hover{color:#EF8A8F}
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#/home" data-route aria-label="CARE Lab home">
-      <img src="assets/logo.png" width="36" height="36" alt="" aria-hidden="true">
-      <span>
-        <span class="brand-name">CARE Lab</span><br>
+      <img src="assets/logo.png?v=2" width="46" height="46" alt="" aria-hidden="true">
+      <span class="brand-text">
+        <span class="brand-name">CARE Lab</span>
         <span class="brand-sub">Child, Adolescent, Resilience, and Ecology Lab</span>
       </span>
     </a>
@@ -342,11 +353,11 @@ footer nav a:hover{color:#EF8A8F}
       <p class="about-role">Associate Professor · Director, CARE Lab</p>
       <div class="about-body">
         <p>Dr. Oh's research program investigates the development of social and emotional functioning from early childhood through adolescence. She examines how individual characteristics, social interactions, close relationships, and socio-cultural contexts shape developmental pathways — with particular attention to the mechanisms through which these influences operate.</p>
-        <p>A central aim of her work is understanding pathways toward adaptive functioning (social competence, self-regulation, positive relationship quality) and maladaptive functioning (social withdrawal, anxiety, depression, aggression, dysregulation) during major normative transitions: the birth of a child or sibling, entry into kindergarten, and the transitions from elementary to middle school, middle to high school, and into adolescence.</p>
+        <p>A central aim of her work is understanding pathways toward adaptive functioning (social competence, self-regulation, positive relationship quality) and maladaptive functioning (social withdrawal, anxiety, depression, aggression, dysregulation, dysfunctional relationships) during major normative transitions: the birth of a child or sibling, entry into kindergarten, and the transitions from elementary to middle school, middle to high school, and into adolescence.</p>
       </div>
       <div class="cred">
         <div><b>Ph.D.</b>Human Development, with Graduate Certificate in Measurement, Statistics &amp; Evaluation — University of Maryland, College Park</div>
-        <div><b>Postdoctoral Fellowship</b>Department of Psychology &amp; Women and Infants Mental Health Program (Psychiatry), University of Michigan, Ann Arbor</div>
+        <div><b>Postdoctoral Fellowship</b>Department of Psychology &amp; Women and Infants Mental Health Program (Department of Psychiatry), University of Michigan, Ann Arbor</div>
         <div><b>B.S. &amp; M.A.</b>Child and Family Studies, Yonsei University, Seoul, South Korea</div>
         <div><b>Profiles</b><a href="https://scholar.google.com/citations?hl=en&amp;user=3KIzzYoAAAAJ" target="_blank" rel="noopener">Google Scholar</a> · <a href="https://www.depts.ttu.edu/hs/hdfs/oh.php" target="_blank" rel="noopener">TTU Faculty Page</a></div>
       </div>
@@ -355,9 +366,6 @@ footer nav a:hover{color:#EF8A8F}
 
     <!-- RIGHT: Hero -->
     <div class="merged-hero">
-      <!-- ✏️ EDIT: RECRUITING (home hero banner) — START -->
-      <span class="hero-chip">Accepting graduate students for Fall 2026</span>
-      <!-- ✏️ EDIT: RECRUITING (home hero banner) — END -->
       <ul class="acronym" aria-label="CARE: Child, Adolescent, Resilience, Ecology">
         <li><b>C</b>HILD</li>
         <li><b>A</b>DOLESCENT</li>
@@ -630,18 +638,22 @@ footer nav a:hover{color:#EF8A8F}
       <h3>Graduate Students</h3>
       <div class="team-grid">
         <div class="member">
-          <div class="member-tile"><span class="init">JF</span></div>
-          <h4>Jes Fyall Cardenas, M.S., IMH-E®</h4>
+          <div class="member-tile"><span class="init">CS</span></div>
+          <h4>Carlos A. Silvera</h4>
           <p class="role">Doctoral Student</p>
-          <p class="focus">Infant mental health; social-emotional development in early childhood; culturally competent support for caregivers.</p>
-          <a class="mail" href="mailto:jes.fyall@ttu.edu">jes.fyall@ttu.edu</a>
+          <p class="focus">Details forthcoming.</p>
         </div>
         <div class="member">
-          <div class="member-tile"><span class="init">JC</span></div>
-          <h4>Jennifer K. Chapman, M.S.</h4>
+          <div class="member-tile"><span class="init">KH</span></div>
+          <h4>MD Khalid Hasan</h4>
           <p class="role">Doctoral Student</p>
-          <p class="focus">Social-emotional development in infancy and early childhood; parent emotion socialization.</p>
-          <a class="mail" href="mailto:jennifer.k.harris@ttu.edu">jennifer.k.harris@ttu.edu</a>
+          <p class="focus">Details forthcoming.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">MR</span></div>
+          <h4>Moramee Roy</h4>
+          <p class="role">Doctoral Student</p>
+          <p class="focus">Details forthcoming.</p>
         </div>
       </div>
     </div>
@@ -650,58 +662,36 @@ footer nav a:hover{color:#EF8A8F}
       <h3>Undergraduate Researchers</h3>
       <div class="team-grid">
         <div class="member">
-          <div class="member-tile"><span class="init">EA</span></div>
-          <h4>Esther Aguilar-Tejada</h4>
+          <div class="member-tile"><span class="init">EF</span></div>
+          <h4>Emma Fernandez</h4>
           <p class="role">Research Assistant</p>
-          <p class="focus">Psychology major; aspiring early childhood school psychologist specializing in developmental assessment.</p>
+          <p class="focus">Details forthcoming.</p>
         </div>
         <div class="member">
           <div class="member-tile"><span class="init">LC</span></div>
-          <h4>Lauren Clendennen</h4>
+          <h4>Lillie Cobb</h4>
           <p class="role">Research Assistant</p>
-          <p class="focus">Psychology major; aspiring clinical psychologist working with children and adolescents.</p>
+          <p class="focus">Details forthcoming.</p>
         </div>
         <div class="member">
-          <div class="member-tile"><span class="init">GP</span></div>
-          <h4>Gerardo Palafox</h4>
+          <div class="member-tile"><span class="init">GM</span></div>
+          <h4>Giana Matheny</h4>
           <p class="role">Research Assistant</p>
-          <p class="focus">Psychology &amp; nuclear engineering; aiming for a doctorate in clinical neuroscience.</p>
+          <p class="focus">Details forthcoming.</p>
         </div>
         <div class="member">
-          <div class="member-tile"><span class="init">MR</span></div>
-          <h4>McKenna Rattan</h4>
+          <div class="member-tile"><span class="init">CG</span></div>
+          <h4>Cailyn Green</h4>
           <p class="role">Research Assistant</p>
-          <p class="focus">College of Education; studying child behavior for a future in middle school teaching.</p>
-        </div>
-        <div class="member">
-          <div class="member-tile"><span class="init">AS</span></div>
-          <h4>Ali Schippel</h4>
-          <p class="role">Research Assistant</p>
-          <p class="focus">Psychology senior; pursuing graduate training in child clinical psychology.</p>
-        </div>
-        <div class="member">
-          <div class="member-tile"><span class="init">JS</span></div>
-          <h4>Josephine Sebit</h4>
-          <p class="role">Research Assistant</p>
-          <p class="focus">Psychology major, Spanish &amp; chemistry minors; volunteers with the Boys and Girls Club.</p>
-        </div>
-        <div class="member">
-          <div class="member-tile"><span class="init">HS</span></div>
-          <h4>Haley Serna</h4>
-          <p class="role">Research Assistant</p>
-          <p class="focus">B.A. Psychology &amp; B.S. HDFS dual degree.</p>
-        </div>
-        <div class="member">
-          <div class="member-tile"><span class="init">JV</span></div>
-          <h4>Jessica Vellion</h4>
-          <p class="role">Research Assistant</p>
-          <p class="focus">HDFS major; aspiring play therapist.</p>
+          <p class="focus">Details forthcoming.</p>
         </div>
       </div>
     </div>
 
     <div class="team-group reveal">
       <h3>Alumni</h3>
+      <p class="team-note">Profiles updating — check back soon.</p>
+      <!-- ✏️ EDIT: ALUMNI PROFILES — unpublished for now (planned to link names to profile pages); restore by removing this comment wrapper
       <div class="team-grid">
         <div class="member">
           <div class="member-tile"><span class="init">JM</span></div>
@@ -709,12 +699,61 @@ footer nav a:hover{color:#EF8A8F}
           <p class="role">Alumna · B.A. Psychology</p>
           <p class="focus">Pursuing graduate study in industrial/organizational psychology.</p>
         </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">EA</span></div>
+          <h4>Esther Aguilar-Tejada</h4>
+          <p class="role">Alum</p>
+          <p class="focus">Psychology major; aspiring early childhood school psychologist specializing in developmental assessment.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">LC</span></div>
+          <h4>Lauren Clendennen</h4>
+          <p class="role">Alum</p>
+          <p class="focus">Psychology major; aspiring clinical psychologist working with children and adolescents.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">GP</span></div>
+          <h4>Gerardo Palafox</h4>
+          <p class="role">Alum</p>
+          <p class="focus">Psychology &amp; nuclear engineering; aiming for a doctorate in clinical neuroscience.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">MR</span></div>
+          <h4>McKenna Rattan</h4>
+          <p class="role">Alum</p>
+          <p class="focus">College of Education; studying child behavior for a future in middle school teaching.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">AS</span></div>
+          <h4>Ali Schippel</h4>
+          <p class="role">Alum</p>
+          <p class="focus">Psychology senior; pursuing graduate training in child clinical psychology.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">JS</span></div>
+          <h4>Josephine Sebit</h4>
+          <p class="role">Alum</p>
+          <p class="focus">Psychology major, Spanish &amp; chemistry minors; volunteers with the Boys and Girls Club.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">HS</span></div>
+          <h4>Haley Serna</h4>
+          <p class="role">Alum</p>
+          <p class="focus">B.A. Psychology &amp; B.S. HDFS dual degree.</p>
+        </div>
+        <div class="member">
+          <div class="member-tile"><span class="init">JV</span></div>
+          <h4>Jessica Vellion</h4>
+          <p class="role">Alum</p>
+          <p class="focus">HDFS major; aspiring play therapist.</p>
+        </div>
       </div>
+      -->
     </div>
 
     <div class="collab-note reveal">
       <h3>Collaborators &amp; Mentors</h3>
-      <p>"I have amazing mentors. Kenneth H. Rubin was an exceptional and dedicated graduate mentor at the University of Maryland. Brenda Volling and Richard Gonzalez were amazing mentors during my postdoctoral fellowship at the University of Michigan. Gregory Hancock was an instrumental mentor during my graduate training in Measurement, Statistics, and Evaluation. The collaborators listed here continue to help me grow as a scholar." — Dr. Oh</p>
+      <p>"I have amazing mentors. Kenneth H. Rubin, Natasha Cabrera, and Greg Hancock were exceptional and dedicated graduate mentors at the University of Maryland, College Park. Brenda Volling, Richard Gonzalez, and Maria Muzik were amazing mentors during my postdoctoral fellowship at the University of Michigan, Ann Arbor. The collaborators listed here continue to help me grow as a scholar." — Dr. Oh</p>
       <p class="collab-names">Cathryn Booth-LaForce · Julie Bowker · Xinyin Chen · Robert Coplan · Ebony Dashiell-Aje · Pamela Davis-Kean · Carolyn J. Dayton · Richard Gonzalez · Sybil Hart · Brett Laursen · Kristina McDonald · Maria Muzik · Linda Rose-Krasnor · Kenneth H. Rubin · Prachi Shah · Brenda Volling · Tianyi Yu, and colleagues worldwide</p>
     </div>
     <!-- ✏️ EDIT: PEOPLE — END -->
@@ -737,8 +776,8 @@ footer nav a:hover{color:#EF8A8F}
     <ul class="timeline reveal">
       <!-- ✏️ EDIT: RECRUITING (News item) — START: update year/status here -->
       <li>
-        <time>2026</time><span class="nkind">Recruiting</span>
-        <h3>CARE Lab is recruiting Ph.D. students for Fall 2026</h3>
+        <time>2027</time><span class="nkind">Recruiting</span>
+        <h3>CARE Lab is recruiting Ph.D. students for Fall 2027</h3>
         <p>Dr. Oh is currently accepting graduate students through the HDFS doctoral program at Texas Tech University. Prospective students interested in social-emotional development, family transitions, or quantitative methods are encouraged to reach out.</p>
       </li>
       <!-- ✏️ EDIT: RECRUITING (News item) — END -->
@@ -785,13 +824,13 @@ footer nav a:hover{color:#EF8A8F}
         <h3>Prospective Ph.D. Students</h3>
         <p>Join through the Human Development &amp; Family Sciences doctoral program. Ideal fits are interested in social-emotional development, family and school transitions, or advanced quantitative methods.</p>
         <!-- ✏️ EDIT: RECRUITING (Join page note) — START -->
-        <p class="note">Now accepting students for Fall 2026 →</p>
+        <p class="note">Now accepting students for Fall 2027 →</p>
         <!-- ✏️ EDIT: RECRUITING (Join page note) — END -->
       </article>
       <article class="join-card">
         <h3>Undergraduate Researchers</h3>
-        <p>Gain hands-on experience with observational coding, data collection with children and families, and the day-to-day craft of developmental science.</p>
-        <p class="note">Applications open year-round →</p>
+        <p>Gain hands-on experience with research involving children, youth, and families, and the multi-faceted dynamics of daily life and ecology.</p>
+        <a href="#" class="note scroll-link" data-target="call-ra">Applications open year-round →</a>
       </article>
       <article class="join-card">
         <h3>Collaborators</h3>
@@ -804,6 +843,30 @@ footer nav a:hover{color:#EF8A8F}
       <a class="btn" href="https://www.depts.ttu.edu/hs/hdfs/graduate/doctoral.php" target="_blank" rel="noopener">HDFS Ph.D. Program ↗</a>
       <span>Include a brief note on your interests and experience.</span>
     </div>
+
+    <!-- ✏️ EDIT: CALL FOR UNDERGRADUATE RA — START -->
+    <div class="call-post reveal" id="call-ra">
+      <span class="eyebrow">Call for Applications</span>
+      <h2>Call for Undergraduate Research Assistants</h2>
+      <p>The Child, Adolescent, Resilience, and Ecology (CARE) Lab, directed by Dr. Wonjung Oh, is recruiting undergraduate research assistants to join our ongoing Youth Digital Engagement and Lifestyles (Y-DEL) Study and upcoming Parental Digital Engagement and Lifestyles (P-DEL) Study.</p>
+      <p>These projects focus on adolescents (ages 10–17) and their parents, examining how digital engagement — including generative AI and chatbot use, media use, online relationships, social gaming, and parental digital use — relates to family and peer relationships, lifestyles, well-being, and mental health.</p>
+      <h3>Undergraduate research assistants will have opportunities to:</h3>
+      <ul>
+        <li>Gain hands-on experience with data collection and processing</li>
+        <li>Assist with online survey development and data management</li>
+        <li>Conduct literature reviews on digital engagement and child/adolescent development</li>
+        <li>Participate in lab meetings and research presentations at conferences</li>
+      </ul>
+      <p>This opportunity is ideal for students interested in human development, psychology, family sciences, or related fields, particularly those considering graduate school or careers in research.</p>
+      <h3>Please submit the following:</h3>
+      <ul>
+        <li>Completed application: <a href="https://forms.cloud.microsoft/r/8Jvq8JkMdq" target="_blank" rel="noopener">Undergraduate Research Position Application ↗</a></li>
+        <li>Résumé</li>
+      </ul>
+      <p>If you have any questions, please contact our Graduate Lab Coordinator Carlos A. Silvera (<a href="mailto:csilvera@ttu.edu">csilvera@ttu.edu</a>) or Director Dr. Wonjung Oh (<a href="mailto:wonjung.oh@ttu.edu">wonjung.oh@ttu.edu</a>).</p>
+      <p class="sig">Sincerely,<br><strong>Dr. Wonjung Oh, Ph.D.</strong><br>Associate Professor, Human Development and Family Sciences<br>Director, Child, Adolescent, Resilience, and Ecology (CARE) Lab<br>College of Health &amp; Human Sciences, Texas Tech University</p>
+    </div>
+    <!-- ✏️ EDIT: CALL FOR UNDERGRADUATE RA — END -->
   </div>
 </section>
 </div>
@@ -858,11 +921,7 @@ footer nav a:hover{color:#EF8A8F}
   <div class="wrap foot-inner">
     <div>
       <div class="foot-brand">
-        <svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true">
-          <rect width="48" height="48" fill="#D8121B"/>
-          <rect x="10" y="10" width="26" height="26" fill="none" stroke="#16130F" stroke-width="3.4" transform="rotate(-9 24 24)"/>
-          <rect x="13" y="13" width="24" height="24" fill="none" stroke="#16130F" stroke-width="3.4" transform="rotate(11 25 25)"/>
-        </svg>
+        <img src="assets/logo.png" width="30" height="30" alt="" aria-hidden="true" style="background:#fff;border-radius:4px;padding:2px">
         <span>
           <span class="brand-name">CARE Lab</span><br>
           <span class="brand-sub">Child, Adolescent, Resilience, and Ecology Lab</span>
@@ -922,6 +981,13 @@ function render(){
 window.addEventListener('hashchange',render);
 if(!location.hash)history.replaceState(null,'','#/home');
 render();
+document.querySelectorAll('.scroll-link').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const el=document.getElementById(a.dataset.target);
+    if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+});
 
 /* ---------- mobile menu ---------- */
 const toggle=document.getElementById('navToggle');
