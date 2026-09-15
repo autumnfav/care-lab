@@ -11,13 +11,13 @@
 <style>
 /* ================= DESIGN SYSTEM ================= */
 :root{
-  --red:#D8121B;
-  --red-dark:#A50E14;
-  --ink:#16130F;
-  --ink-soft:#3E3933;
-  --muted:#5F5A54;
-  --line:#E7E2DC;
-  --paper:#F8F6F3;
+  --red:#E90802;
+  --red-dark:#B80602;
+  --ink:#000000;
+  --ink-soft:#333333;
+  --muted:#757575;
+  --line:#EDEDED;
+  --paper:#F7F4F2;
   --white:#FFFFFF;
   --display:'Inter',system-ui,-apple-system,sans-serif;
   --body:'Inter',system-ui,-apple-system,sans-serif;
@@ -174,7 +174,23 @@ img{max-width:100%;display:block}
 .research-card .tag-row{margin-top:16px;display:flex;flex-wrap:wrap;gap:7px}
 .tag{font-family:var(--display);font-size:11.5px;font-weight:600;letter-spacing:.05em;color:var(--red-dark);background:rgba(216,18,27,.07);padding:4px 10px;border-radius:999px}
 .research-card.wide{grid-column:1/-1}
+.card-link{display:inline-block;margin-top:14px;font-family:var(--display);font-size:13px;font-weight:600;color:var(--red)}
+.card-link:hover{color:var(--red-dark)}
 @media(max-width:760px){.research-grid{grid-template-columns:1fr}}
+
+/* ---------- study detail (flyer + info) ---------- */
+.study-detail{display:grid;grid-template-columns:320px 1fr;gap:44px;align-items:start;margin-top:30px}
+.study-detail img{width:100%;border-radius:6px;border:1px solid var(--line);box-shadow:0 10px 28px rgba(0,0,0,.08)}
+.study-detail p{color:var(--ink-soft);font-size:16px;line-height:1.7;margin-top:14px}
+.study-detail p:first-child{margin-top:0}
+.study-parts{margin-top:18px;display:grid;gap:14px}
+.study-part{background:var(--paper);border-radius:5px;padding:16px 18px}
+.study-part b{display:block;font-family:var(--display);font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);margin-bottom:6px}
+.study-part p{margin-top:0;font-size:15px}
+.study-cta{margin-top:22px;display:flex;gap:16px;flex-wrap:wrap;align-items:center}
+.study-cta .contact{color:var(--muted);font-size:14.5px}
+.study-cta .contact a{text-decoration:underline}
+@media(max-width:820px){.study-detail{grid-template-columns:1fr}}
 
 /* ---------- publications ---------- */
 .pub-toolbar{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:30px}
@@ -492,6 +508,61 @@ footer nav a:hover{color:#EF8A8F}
     </div>
   </div>
 </section>
+
+<!-- ✏️ EDIT: ONGOING RESEARCH PROJECTS — START -->
+<section class="section alt">
+  <div class="wrap">
+    <span class="eyebrow">Ongoing Research Projects</span>
+    <h2>Current studies</h2>
+    <div class="research-grid reveal">
+      <article class="research-card">
+        <div class="csq"></div>
+        <span class="idx">ONGOING · Y-DEL STUDY</span>
+        <h3>Youth Digital Engagement and Lifestyles Study</h3>
+        <p>Examines how adolescents (ages 10–17) engage with digital technology — including generative AI and chatbot use, media use, online relationships, and social gaming — and how that engagement relates to family and peer relationships, lifestyles, well-being, and mental health.</p>
+        <div class="tag-row"><span class="tag">Digital engagement</span><span class="tag">Adolescents</span><span class="tag">Well-being</span></div>
+        <a href="#" class="card-link scroll-link" data-target="ydel-detail">Study details &amp; flyer →</a>
+      </article>
+      <article class="research-card">
+        <div class="csq"></div>
+        <span class="idx">UPCOMING · P-DEL STUDY</span>
+        <h3>Parental Digital Engagement and Lifestyles Study</h3>
+        <p>A companion study extending the Y-DEL project to parents, examining how parents' own digital engagement relates to family dynamics, parenting practices, and adolescent outcomes.</p>
+        <div class="tag-row"><span class="tag">Parenting</span><span class="tag">Digital use</span><span class="tag">Family dynamics</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="ydel-detail">
+  <div class="wrap">
+    <span class="eyebrow">Study Details</span>
+    <h2>Youth Digital Engagement and Lifestyle (Y-DEL) Study</h2>
+    <div class="study-detail reveal">
+      <img src="assets/ydel-flyer.jpg" alt="Y-DEL Study recruitment flyer: Youth Digital Engagement and Lifestyle Study, a research opportunity for families with a parent/guardian and child ages 10–17, run by the CARE Lab at Texas Tech University." loading="lazy">
+      <div>
+        <p>Families are invited! Parent–youth dyads (one parent/legal guardian and one youth aged 10–17) are invited to participate in a research study about youth daily digital engagement and emotional well-being. Both the parent/legal guardian and youth must provide consent/assent to participate.</p>
+        <p>Families may receive up to $120 in electronic gift cards to thank them for their time in the full study.</p>
+        <div class="study-parts">
+          <div class="study-part">
+            <b>Part 1 · Baseline Interview &amp; Surveys</b>
+            <p>Parent/legal guardian and youth complete an online interview and baseline surveys (about 30–60 minutes). Families receive $50 for completing this part.</p>
+          </div>
+          <div class="study-part">
+            <b>Part 2 · 7-Day Surveys</b>
+            <p>Youth complete brief online surveys (about 2–5 minutes each) five times per day over a 7-day period. Families receive $70 for completing this part.</p>
+          </div>
+        </div>
+        <p>Participation is voluntary, and families may stop at any time for any reason. This study has been approved by the Texas Tech University Human Research Protection Program (Institutional Review Board).</p>
+        <div class="study-cta">
+          <a class="btn primary" href="http://go.ttu.edu/ydelstudy" target="_blank" rel="noopener">Take the Eligibility Survey ↗</a>
+          <span class="contact">Questions? Contact Dr. Oh at <a href="mailto:wonjung.oh@ttu.edu">wonjung.oh@ttu.edu</a> (806-834-7736) or the research team at <a href="mailto:hhs.carelab@ttu.edu">hhs.carelab@ttu.edu</a> (806-834-2638).</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ✏️ EDIT: ONGOING RESEARCH PROJECTS — END -->
 </div>
 
 <!-- ================================================= -->
