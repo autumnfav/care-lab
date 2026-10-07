@@ -214,6 +214,9 @@ img{max-width:100%;display:block}
 .pub.featured{border-left:4px solid var(--red);padding-left:24px;background:linear-gradient(90deg,rgba(216,18,27,.04),transparent 45%);border-radius:0 5px 5px 0}
 .feat-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
 .feat-badge::before{content:"";width:7px;height:7px;background:var(--red);transform:rotate(45deg)}
+.pres-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--display);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:8px}
+.pres-badge::before{content:"";width:7px;height:7px;border:1.5px solid var(--ink-soft);transform:rotate(45deg)}
+.pub-jump{margin-top:18px}
 .award-note{margin-top:10px;font-size:14px;color:var(--muted);font-style:italic;display:flex;gap:9px;align-items:flex-start}
 .award-note::before{content:"";width:8px;height:8px;background:var(--red);transform:rotate(45deg);flex:none;margin-top:6px}
 .pub-note{margin-top:16px;font-size:13.5px;color:var(--muted)}
@@ -579,6 +582,7 @@ footer nav a:hover{color:#EF8A8F}
   <div class="wrap">
     <span class="eyebrow">Publications</span>
     <h1>Selected work.</h1>
+    <a href="#" class="hero-chip pub-jump" id="pubJumpPresentations">🎓 Jump to Student Conference Presentations</a>
   </div>
 </section>
 <section class="section">
@@ -589,6 +593,7 @@ footer nav a:hover{color:#EF8A8F}
         <button class="pub-filter" data-filter="2020s">2020s</button>
         <button class="pub-filter" data-filter="2010s">2010s</button>
         <button class="pub-filter" data-filter="featured">Featured</button>
+        <button class="pub-filter" data-filter="presentations">Presentations</button>
       </div>
       <a class="scholar-btn" href="https://scholar.google.com/citations?hl=en&amp;user=3KIzzYoAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
     </div>
@@ -703,6 +708,16 @@ footer nav a:hover{color:#EF8A8F}
           <h3>Trajectories of social withdrawal from middle childhood to early adolescence</h3>
           <p class="venue">Journal of Abnormal Child Psychology, 36(4), 553–566</p>
           <div class="pub-links"><a href="https://doi.org/10.1007/s10802-007-9199-z" target="_blank" rel="noopener">DOI ↗</a></div>
+        </div>
+      </li>
+      <!-- ✏️ EDIT: CONFERENCE PRESENTATIONS — to add one, copy this <li class="pub" data-type="presentation"> block -->
+      <li class="pub" data-type="presentation" data-decade="2020s" id="pub-presentations">
+        <div class="pub-year">—</div>
+        <div class="pub-body">
+          <span class="pres-badge">Conference Presentation</span>
+          <p class="authors">Lab student presentations</p>
+          <h3>Details forthcoming</h3>
+          <p class="venue">Student conference presentations will be listed here.</p>
         </div>
       </li>
     </ul>
@@ -1112,20 +1127,31 @@ toggle.addEventListener('click',()=>{
 });
 
 /* ---------- publication filters ---------- */
-document.querySelectorAll('.pub-filter').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.pub-filter').forEach(b=>b.classList.remove('active'));
-    btn.classList.add('active');
-    const f=btn.dataset.filter;
-    document.querySelectorAll('.pub').forEach(p=>{
-      const show=f==='all'
-        ||(f==='featured'&&p.dataset.featured==='true')
-        ||(f==='2020s'&&p.dataset.decade==='2020s')
-        ||(f==='2010s'&&(p.dataset.decade==='2010s'||p.dataset.decade==='2000s'));
-      p.classList.toggle('hidden',!show);
-    });
+function applyPubFilter(f){
+  document.querySelectorAll('.pub-filter').forEach(b=>b.classList.toggle('active',b.dataset.filter===f));
+  document.querySelectorAll('.pub').forEach(p=>{
+    const isPres=p.dataset.type==='presentation';
+    const show=f==='all'
+      ||(f==='presentations'&&isPres)
+      ||(!isPres&&(
+          (f==='featured'&&p.dataset.featured==='true')
+          ||(f==='2020s'&&p.dataset.decade==='2020s')
+          ||(f==='2010s'&&(p.dataset.decade==='2010s'||p.dataset.decade==='2000s'))
+      ));
+    p.classList.toggle('hidden',!show);
   });
+}
+document.querySelectorAll('.pub-filter').forEach(btn=>{
+  btn.addEventListener('click',()=>applyPubFilter(btn.dataset.filter));
 });
+const pubJump=document.getElementById('pubJumpPresentations');
+if(pubJump){
+  pubJump.addEventListener('click',e=>{
+    e.preventDefault();
+    applyPubFilter('presentations');
+    document.getElementById('pub-presentations').scrollIntoView({behavior:'smooth',block:'center'});
+  });
+}
 </script>
 </body>
 </html>
