@@ -220,6 +220,9 @@ img{max-width:100%;display:block}
 .award-note{margin-top:10px;font-size:14px;color:var(--muted);font-style:italic;display:flex;gap:9px;align-items:flex-start}
 .award-note::before{content:"";width:8px;height:8px;background:var(--red);transform:rotate(45deg);flex:none;margin-top:6px}
 .pub-note{margin-top:16px;font-size:13.5px;color:var(--muted)}
+.pub-legend{margin-top:0;margin-bottom:14px}
+.pub-body h3 .pres-type{font-weight:400;font-style:normal}
+.pub[data-type="presentation"] .venue{font-style:normal}
 @media(max-width:640px){.pub{grid-template-columns:1fr;gap:8px}}
 
 /* ---------- team ---------- */
@@ -597,6 +600,7 @@ footer nav a:hover{color:#EF8A8F}
       </div>
       <a class="scholar-btn" href="https://scholar.google.com/citations?hl=en&amp;user=3KIzzYoAAAAJ" target="_blank" rel="noopener">Google Scholar ↗</a>
     </div>
+    <p class="pub-note pub-legend">* denotes graduate student collaborator &nbsp;&nbsp; ** denotes undergraduate student collaborator</p>
     <!-- ✏️ EDIT: PUBLICATIONS LIST — START: to add a paper, copy an existing <li class="pub"> block (data-decade="2020s" or "2010s"). -->
     <ul class="pub-list reveal">
       <li class="pub" data-decade="2020s">
@@ -715,18 +719,18 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
-          <p class="authors">**Matheny, G., **Fernandez, E., *Silvera, C. A., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026).</p>
-          <h3>When technology interferes: Youth and parent perspectives on family relationships and emotional well-being</h3>
-          <p class="venue">[Impact talk]. Texas Tech University Fall Symposium.</p>
+          <p class="authors">**Matheny, G., **Fernandez, E., *Silvera, C. A., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026, November).</p>
+          <h3><em>When technology interferes: Youth and parent perspectives on family relationships and emotional well-being</em> <span class="pres-type">[Impact talk].</span></h3>
+          <p class="venue">Texas Tech University Fall Symposium, Lubbock, TX.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
-          <p class="authors">**Green, C., **Fernandez, E., *Silvera, C. A., *Hasan, M. K., *Stopfer, K., &amp; <b>Oh, W.</b> (2026).</p>
-          <h3>Connected or disconnected? Youth, digital media, relationships, and well-being</h3>
-          <p class="venue">[Impact talk]. Texas Tech University Fall Symposium.</p>
+          <p class="authors">**Green, C., **Fernandez, E., *Silvera, C. A., *Hasan, M. K., *Stopfer, K., &amp; <b>Oh, W.</b> (2026, November).</p>
+          <h3><em>Connected or disconnected? Youth, digital media, relationships, and well-being</em> <span class="pres-type">[Impact talk].</span></h3>
+          <p class="venue">Texas Tech University Fall Symposium, Lubbock, TX.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
@@ -734,8 +738,8 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
           <p class="authors">*Hasan, M. K., *Swinney, E., &amp; <b>Oh, W.</b> (2026, June).</p>
-          <h3>Trajectories and predictors of Hurricane Ike–related posttraumatic stress disorder symptomology</h3>
-          <p class="venue">[Poster presentation]. Biennial Meeting of the International Society for the Study of Behavioral Development (ISSBD), Incheon, South Korea.</p>
+          <h3><em>Trajectories and predictors of Hurricane Ike–related posttraumatic stress disorder symptomology</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Biennial Meeting of the International Society for the Study of Behavioral Development (ISSBD), Incheon, South Korea.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
@@ -743,8 +747,8 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
           <p class="authors">*Swinney, E., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026, June).</p>
-          <h3>Distinct parenting profiles of low-income Latine mothers and child self-regulation skills: A person-centered approach</h3>
-          <p class="venue">[Poster submission]. Biennial Meeting of the International Society for the Study of Behavioral Development (ISSBD), Incheon, South Korea.</p>
+          <h3><em>Distinct parenting profiles of low-income Latine mothers and child self-regulation skills: A person-centered approach</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Biennial Meeting of the International Society for the Study of Behavioral Development (ISSBD), Incheon, South Korea.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
@@ -752,8 +756,8 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
           <p class="authors"><b>Oh, W.</b>, *Silvera, C. A., **Fernandez, E., *Hasan, M. K., &amp; *Swinney, E. (2026, May).</p>
-          <h3>Exploring the digital lives of adolescents: Pathways between online engagement and well-being</h3>
-          <p class="venue">[Poster presentation]. Association for Psychological Science (APS) Annual Convention, Barcelona, Spain.</p>
+          <h3><em>Exploring the digital lives of adolescents: Pathways between online engagement and well-being</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Association for Psychological Science (APS) Annual Convention, Barcelona, Spain.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
@@ -761,35 +765,35 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
           <p class="authors">*Hasan, M. K., *Swinney, E., &amp; <b>Oh, W.</b> (2026, May).</p>
-          <h3>Longitudinal reciprocal association between Hurricane Ike–related PTSD and quality of life among survivors: A cross-lagged panel model</h3>
-          <p class="venue">[Poster presentation]. Association for Psychological Science (APS) Annual Convention, Barcelona, Spain.</p>
+          <h3><em>Longitudinal reciprocal association between Hurricane Ike–related PTSD and quality of life among survivors: A cross-lagged panel model</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Association for Psychological Science (APS) Annual Convention, Barcelona, Spain.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
-          <p class="authors">**Fernandez, E., *Silvera, C. A., *Swinney, E., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026, April 7–8).</p>
-          <h3>Excessive smartphone use and its impact on emotion regulation and relationship quality in adolescence</h3>
-          <p class="venue">[Poster presentation]. Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
+          <p class="authors">**Fernandez, E., *Silvera, C. A., *Swinney, E., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026, April).</p>
+          <h3><em>Excessive smartphone use and its impact on emotion regulation and relationship quality in adolescence</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
-          <p class="authors">**Cobb, L., *Silvera, C. A., *Hasan, M. K., *Swinney, E., &amp; <b>Oh, W.</b> (2026, April 7–8).</p>
-          <h3>Excessive digital engagement, social withdrawal, and family relationships in adolescence</h3>
-          <p class="venue">[Poster presentation]. Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
+          <p class="authors">**Cobb, L., *Silvera, C. A., *Hasan, M. K., *Swinney, E., &amp; <b>Oh, W.</b> (2026, April).</p>
+          <h3><em>Excessive digital engagement, social withdrawal, and family relationships in adolescence</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
-          <p class="authors">**Kamal, S., *Silvera, C. A., *Hasan, M. K., *Swinney, E., &amp; <b>Oh, W.</b> (2026, April 7–8).</p>
-          <h3>Digital engagement and adolescent psychological adjustment: The role of digital literacy</h3>
-          <p class="venue">[Poster presentation]. Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
+          <p class="authors">**Kamal, S., *Silvera, C. A., *Hasan, M. K., *Swinney, E., &amp; <b>Oh, W.</b> (2026, April).</p>
+          <h3><em>Digital engagement and adolescent psychological adjustment: The role of digital literacy</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
           <p class="award-note">1st Place Winner, Outstanding Research Abstract Award, TTU Undergraduate Research Conference 2026</p>
         </div>
       </li>
@@ -797,9 +801,9 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-year">2026</div>
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
-          <p class="authors">**Farah, M., *Silvera, C. A., *Swinney, E., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026, April 7–8).</p>
-          <h3>Parental technology use and child emotional regulation</h3>
-          <p class="venue">[Poster presentation]. Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
+          <p class="authors">**Farah, M., *Silvera, C. A., *Swinney, E., *Hasan, M. K., &amp; <b>Oh, W.</b> (2026, April).</p>
+          <h3><em>Parental technology use and child emotional regulation</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Undergraduate Research Conference, Texas Tech University, Lubbock, TX.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
@@ -807,8 +811,8 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
           <p class="authors">*Quick, M., Reifman, A., Dodd, S., &amp; <b>Oh, W.</b> (2026, April).</p>
-          <h3>Using quantile regression to understand positive youth development program outcomes</h3>
-          <p class="venue">[Poster accepted for presentation]. Society for Research on Adolescence (SRA) Annual Meeting, Toronto, Canada.</p>
+          <h3><em>Using quantile regression to understand positive youth development program outcomes</em> <span class="pres-type">[Poster accepted for presentation].</span></h3>
+          <p class="venue">Society for Research on Adolescence (SRA) Annual Meeting, Toronto, Canada.</p>
         </div>
       </li>
       <li class="pub" data-type="presentation" data-decade="2020s">
@@ -816,13 +820,13 @@ footer nav a:hover{color:#EF8A8F}
         <div class="pub-body">
           <span class="pres-badge">Conference Presentation</span>
           <p class="authors">*Swinney, E., *Song, S., *Hasan, M. K., &amp; <b>Oh, W.</b> (2025, April).</p>
-          <h3>Maternal supportiveness, risk and resilience, and school readiness skills among economically disadvantaged children in Latinx families</h3>
-          <p class="venue">[Poster presentation]. Society for Research in Child Development (SRCD) Biennial Meeting, Minneapolis, MN.</p>
+          <h3><em>Maternal supportiveness, risk and resilience, and school readiness skills among economically disadvantaged children in Latinx families</em> <span class="pres-type">[Poster presentation].</span></h3>
+          <p class="venue">Society for Research in Child Development (SRCD) Biennial Meeting, Minneapolis, MN.</p>
         </div>
       </li>
     </ul>
     <!-- ✏️ EDIT: PUBLICATIONS LIST — END -->
-    <p class="pub-note">* denotes graduate student collaborator; ** denotes undergraduate student collaborator. For the complete record, see Google Scholar.</p>
+    <p class="pub-note">For the complete record, see Google Scholar.</p>
   </div>
 </section>
 </div>
